@@ -200,3 +200,15 @@ cargo clippy --all-targets -- -D warnings
 ## License
 
 Licensed under either of [MIT](LICENSE-MIT) or [Apache License 2.0](LICENSE-APACHE), at your option.
+
+## GitHub Pages
+
+The static landing page is in [`docs/`](docs/). To publish it from this repository:
+
+1. Push the `docs/index.html` file to the repository's default branch.
+2. Open the repository on GitHub and go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select the default branch and the `/docs` folder, then click **Save**.
+5. Wait for the deployment shown on the Pages settings screen, then open the published URL.
+
+Alternatively, build or copy the site into the root of a `gh-pages` branch and select that branch with the `/ (root)` folder in the same Pages settings. GitHub Pages deploys the static files; no build step is required.
