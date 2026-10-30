@@ -1,0 +1,32 @@
+[package]
+name = "extractrs"
+version = "0.1.0"
+edition = "2024"
+description = "Fast, privacy-first webpage extraction to Markdown, text, or JSON"
+license = "MIT OR Apache-2.0"
+rust-version = "1.85"
+
+[[bin]]
+name = "extractrs"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+dom_smoothie = "0.19"
+encoding_rs = "0.8"
+indicatif = "0.17"
+quick_html2md = "0.2"
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "charset", "gzip", "brotli", "deflate", "http2"] }
+scraper = "0.29"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "fs", "sync"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = "2"
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"
